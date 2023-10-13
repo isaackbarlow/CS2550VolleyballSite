@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Volleyball Website</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img src="volleyball.jpg" alt="Volleyball Logo" />
+      </div>
+      <h1>Welcome to Volleyball World</h1>
+    </header>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#shows">Shows</a></li>
+        <li><a href="#videos">Videos</a></li>
+      </ul>
+    </nav>
+    <main>
+      <section id="home">
+        <h2>Home Page</h2>
+        <p>Welcome to the world of volleyball!</p>
+        <br />
+        <p>
+          Volleyball is a sport involving two teams and a net in the middle.<br />
+          The goal is to connect with your teammates to put the ball into the
+          other teams court.<br />
+          If your team cannot keep the ball in the air, the other team will
+          score.
+        </p>
+      </section>
+      <section id="contact">
+        <h2>Contact Information</h2>
+        <p>You can contact us at volleyballsquad@gmail.com</p>
+        <p>Please send any photos, videos or questions to us!</p>
+      </section>
+      <section id="shows">
+        <h2>Shows</h2>
+        <p>
+          One of the best volleyball shows of all time is an Anime called
+          Haikyuu.
+        </p>
+        <p>
+          This show is about a High School Volleyball team that is striving to
+          climb the heights and go to the national tournament!
+        </p>
+        <figure>
+          <img
+            src="Haikyuu-Logo.png"
+            alt="Haikyuu Logo"
+            width="560"
+            height="300"
+          />
+          <figcaption>Haikyuu Manga and Anime Logo.</figcaption>
+        </figure>
+      </section>
+      <section id="videos">
+        <h2>Volleyball Videos</h2>
+        <p>
+          This video shows a great volleyball game between two of the world's
+          top teams!
+        </p>
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/DS4iVV8_cp4"
+          frameborder="0"
+          allowfullscreen
+        ></iframe>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2023 Volleyball World</p>
+    </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const sections = document.querySelectorAll("section");
+        const menuLinks = document.querySelectorAll("nav a");
+
+        function showSection(sectionId) {
+          sections.forEach((section) => {
+            if (section.id === sectionId) {
+              section.style.display = "block";
+            } else {
+              section.style.display = "none";
+            }
+          });
+        }
+
+        menuLinks.forEach((link) => {
+          link.addEventListener("click", (event) => {
+            event.preventDefault();
+            const sectionId = event.target.getAttribute("href").slice(1);
+            showSection(sectionId);
+          });
+        });
+
+        showSection("home");
+      });
+    </script>
+  </body>
+</html>
