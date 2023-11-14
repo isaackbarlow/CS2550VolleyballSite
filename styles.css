@@ -14,12 +14,13 @@ nav {
   background: #b8b8b8;
   color: #333;
   padding: 10px;
+  display: flex;
+  justify-content: center;
 }
 
 nav ul {
   list-style: none;
   display: flex;
-  justify-content: center;
 }
 
 nav li {

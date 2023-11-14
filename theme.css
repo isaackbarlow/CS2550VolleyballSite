@@ -1,0 +1,29 @@
+body {
+  background: #222;
+  color: #fff;
+}
+
+header {
+  background: #333;
+  color: #ff9100;
+}
+
+nav {
+  background: #444;
+}
+
+nav a {
+  color: #ff9100;
+}
+
+main {
+  padding: 30px;
+}
+
+section {
+  margin-bottom: 20px;
+}
+
+footer {
+  background: #333;
+}
