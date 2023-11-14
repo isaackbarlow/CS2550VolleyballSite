@@ -1,15 +1,21 @@
 body {
-  background: #222;
+  background: #111;
   color: #fff;
 }
 
 header {
   background: #333;
   color: #ff9100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
 }
 
 nav {
   background: #444;
+  text-align: left;
+  padding-left: 20px;
 }
 
 nav a {
